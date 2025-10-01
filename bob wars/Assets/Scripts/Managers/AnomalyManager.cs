@@ -5,7 +5,8 @@ using UnityEngine;
 public class AnomalyManager : MonoBehaviour
 {
     public static AnomalyManager instance; // For singleton
-    [SerializeField] private List<GameObject> _anomalies;
+    [SerializeField] private GameObject _disappearObject;
+    [SerializeField] private GameObject _biggerObject;
 
     // Establishing a singleton:
     private void Awake()
@@ -22,17 +23,37 @@ public class AnomalyManager : MonoBehaviour
     }
 
     // Function for choosing and applying anomalies
-    public void ApplyAnomaly()
+    public void ApplyAnomaly1()
     {
-        Anomaly chosen = _anomalies[Random.Range(0, _anomalies.Count)].GetComponent<Anomaly>();
-        chosen.ApplyAnomaly();
-    }
-}
+        int count = 2;
+        // Anomaly chosen = _anomalies[Random.Range(0, cou)].GetComponent<Anomaly>();
 
-public class AnomalyFunctions
-{
-    public void Test()
+        int rand = Random.Range(0, count);
+        Debug.Log(rand);
+        if (rand == 0) // Disappear
+        {
+            Disappear();
+        }
+        else if (rand == 1) // Big
+        {
+            theOtherThing();
+        }
+
+        // Debug.Log(chosen);
+        // chosen.ApplyAnomaly();
+    }
+
+
+
+
+
+    // Functions
+    public void Disappear()
     {
-        Debug.Log("Test success");
+        _disappearObject.SetActive(false);
+    }
+    public void theOtherThing(GameObject obj)
+    {
+        _biggerObject.transform.localScale = new Vector3(10, 10, 10);
     }
 }

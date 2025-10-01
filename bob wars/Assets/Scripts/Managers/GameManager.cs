@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        AnomalyManager.instance.ApplyAnomaly();
+        AnomalyManager.instance.ApplyAnomaly1();
     }
 
     // PUBLIC FUNCTIONS
