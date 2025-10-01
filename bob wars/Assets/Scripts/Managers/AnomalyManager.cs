@@ -28,7 +28,7 @@ public class AnomalyManager : MonoBehaviour
         int count = 2;
         // Anomaly chosen = _anomalies[Random.Range(0, cou)].GetComponent<Anomaly>();
 
-        int rand = Random.Range(0, count);
+        int rand = Random.Range(0, count + 1);
         Debug.Log(rand);
         if (rand == 0) // Disappear
         {
@@ -52,7 +52,7 @@ public class AnomalyManager : MonoBehaviour
     {
         _disappearObject.SetActive(false);
     }
-    public void theOtherThing(GameObject obj)
+    public void theOtherThing()
     {
         _biggerObject.transform.localScale = new Vector3(10, 10, 10);
     }
