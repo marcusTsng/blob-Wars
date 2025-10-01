@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _camSensitivity;
 
     // Inputs
-    private float _inpX, _inpY = 0f;
     private float _camX, _camY = 0f;
 
     // Check variables (for physics)
