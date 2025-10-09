@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
 
         _camX += Input.GetAxisRaw("Mouse X");
         _camY -= Input.GetAxisRaw("Mouse Y");
+        _camY = Mathf.Clamp(_camY, -30, 30);
 
         // CAP MOVEMENT
         if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)))
