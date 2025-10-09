@@ -31,10 +31,6 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
     }
 
-    private void Start()
-    {
-    }
-
     private void Update()
     {
         // CAMERA CONTROLS
